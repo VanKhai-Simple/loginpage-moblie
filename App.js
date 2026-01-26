@@ -1,11 +1,13 @@
 // import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View , FlatList,SafeAreaView, } from 'react-native';
-import { Ionicons } from "@expo/vector-icons";
-// import LoginScreen from "./src/LoginScreen";
+// import { StyleSheet, Text, View , FlatList,SafeAreaView, } from 'react-native';
+import { View, Button, Alert, StyleSheet ,Platform } from "react-native";
 
-// export default function App() {
-//   return <LoginScreen />;
-// }
+// import { Ionicons } from "@expo/vector-icons";
+import LoginScreen from "./src/LoginScreen";
+
+export default function App() {
+  return <LoginScreen />;
+}
 
 // const styles = StyleSheet.create({
 //   container: {
@@ -15,42 +17,44 @@ import { Ionicons } from "@expo/vector-icons";
 //     justifyContent: 'center',
 //   },
 // });
-// --------------- ------------------Bài 1 --------------------------------------//
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <View style={styles.square}>
-        <Text style={styles.text}>Hello world</Text>
-      </View>
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,  
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#fff',
-  },
-  square: {
-    width: 200, 
-    height: 200,
-    backgroundColor: 'blue',
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderWidth: 2, 
-    borderColor: 'black',
-  },
-  text : {
-    color: 'white',
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-});
 
 
-// --------------- ------------------Bài 2 --------------------------------------//
+// --------------- ------------------Bài 3.1 --------------------------------------//
+// export default function App() {
+//   return (
+//     <View style={styles.container}>
+//       <View style={styles.square}>
+//         <Text style={styles.text}>Hello world</Text>
+//       </View>
+//     </View>
+//   );
+// }
+
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,  
+//     justifyContent: 'center',
+//     alignItems: 'center',
+//     backgroundColor: '#fff',
+//   },
+//   square: {
+//     width: 200, 
+//     height: 200,
+//     backgroundColor: 'blue',
+//     justifyContent: 'center',
+//     alignItems: 'center',
+//     borderWidth: 2, 
+//     borderColor: 'black',
+//   },
+//   text : {
+//     color: 'white',
+//     fontSize: 20,
+//     fontWeight: 'bold',
+//   },
+// });
+
+
+// --------------- ------------------Bài 3.2 --------------------------------------//
 
 // const DATA = [
 //   {
@@ -158,5 +162,62 @@ const styles = StyleSheet.create({
 //     height: 1,
 //     backgroundColor: "#eee",
 //     marginLeft: 68,
+//   },
+// });
+
+
+// --------------- ------------------Bài 4.1 --------------------------------------//
+// export default function App() {
+
+//   return (
+//     <View style={styles.container}>
+//       <Button
+//           title="Press me"
+//           onPress={() => {
+//             if (Platform.OS === "web") {
+//               alert("hello");
+//             } else {
+//               Alert.alert("hello");
+//             }
+//           }}
+//         />
+//     </View>
+//   );
+// }
+
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     justifyContent: "center",
+//     alignItems: "center",
+//   },
+// });
+
+// --------------- ------------------Bài 4.2 --------------------------------------//
+// const Square = ({ color }) => {
+//   return <View style={[styles.square, { backgroundColor: color }]} />;
+// };
+
+// export default function App() {
+//   return (
+//     <View style={styles.container}>
+//       <Square color="red" />
+//       <Square color="green" />
+//       <Square color="blue" />
+//     </View>
+//   );
+// }
+
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     flexDirection: "row", // sắp xếp theo hàng ngang
+//     justifyContent: "center", // căn giữa dọc
+//     alignItems: "center",     // căn giữa ngang
+//   },
+//   square: {
+//     width: 100,
+//     height: 100,
+//     margin: 10,
 //   },
 // });
