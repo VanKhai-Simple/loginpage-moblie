@@ -1,13 +1,17 @@
 // import { StatusBar } from 'expo-status-bar';
 // import { StyleSheet, Text, View , FlatList,SafeAreaView, } from 'react-native';
-import { View, Button, Alert, StyleSheet ,Platform } from "react-native";
+// import { View, Button, Alert, StyleSheet ,Platform } from "react-native";
+import React, { useState } from "react";
+// import { View, Text, Button, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Alert } from "react-native";
+import ColorButton from "./src/ColorButton";
 
 // import { Ionicons } from "@expo/vector-icons";
-import LoginScreen from "./src/LoginScreen";
+// import LoginScreen from "./src/LoginScreen";
 
-export default function App() {
-  return <LoginScreen />;
-}
+// export default function App() {
+//   return <LoginScreen />;
+// }
 
 // const styles = StyleSheet.create({
 //   container: {
@@ -221,3 +225,90 @@ export default function App() {
 //     margin: 10,
 //   },
 // });
+
+
+// --------------- ------------------Bài 5.1 --------------------------------------//
+
+// export default function App() {
+//   const [count, setCount] = useState(0);
+
+//   return (
+//     <View style={styles.container}>
+//       <Text style={styles.text}>Giá trị: {count}</Text>
+
+//       <View style={styles.buttonContainer}>
+//         <Button
+//           title="Increase"
+//           onPress={() => setCount(count + 1)}
+//         />
+//         <Button
+//           title="Decrease"
+//           onPress={() => setCount(count - 1)}
+//         />
+//       </View>
+//     </View>
+//   );
+// }
+
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     justifyContent: "center",
+//     alignItems: "center",
+//   },
+//   text: {
+//     fontSize: 24,
+//     marginBottom: 20,
+//   },
+//   buttonContainer: {
+//     width: 200,
+//     gap: 10,
+//   },
+// });
+
+
+// --------------- ------------------Bài 5.2 --------------------------------------//
+
+export default function App() {
+  const [bgColor, setBgColor] = useState("#ffffff");
+
+  const handleChangeColor = (color) => {
+    setBgColor(color);
+    Alert.alert("Thông báo", `Đã đổi màu nền thành ${color}`);
+  };
+
+  return (
+    <View style={[styles.container, { backgroundColor: bgColor }]}>
+      <Text style={styles.title}>Chọn màu nền</Text>
+
+      <ColorButton
+        title="Red"
+        color="red"
+        onPress={handleChangeColor}
+      />
+      <ColorButton
+        title="Green"
+        color="green"
+        onPress={handleChangeColor}
+      />
+      <ColorButton
+        title="Blue"
+        color="blue"
+        onPress={handleChangeColor}
+      />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: "bold",
+    marginBottom: 20,
+  },
+});
