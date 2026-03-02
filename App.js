@@ -4,23 +4,23 @@
 import React, { useState } from "react";
 // import { View, Text, Button, StyleSheet } from "react-native";
 import { View, Text, StyleSheet, Alert } from "react-native";
-import ColorButton from "./src/ColorButton";
+// import ColorButton from "./src/ColorButton";
 
-// import { Ionicons } from "@expo/vector-icons";
-// import LoginScreen from "./src/LoginScreen";
+import { Ionicons } from "@expo/vector-icons";
+import LoginScreen from "./src/LoginScreen";
 
-// export default function App() {
-//   return <LoginScreen />;
-// }
+export default function App() {
+  return <LoginScreen />;
+}
 
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: '#fff',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//   },
-// });
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
 
 
 // --------------- ------------------Bài 3.1 --------------------------------------//
@@ -269,46 +269,46 @@ import ColorButton from "./src/ColorButton";
 
 // --------------- ------------------Bài 5.2 --------------------------------------//
 
-export default function App() {
-  const [bgColor, setBgColor] = useState("#ffffff");
+// export default function App() {
+//   const [bgColor, setBgColor] = useState("#ffffff");
 
-  const handleChangeColor = (color) => {
-    setBgColor(color);
-    Alert.alert("Thông báo", `Đã đổi màu nền thành ${color}`);
-  };
+//   const handleChangeColor = (color) => {
+//     setBgColor(color);
+//     Alert.alert("Thông báo", `Đã đổi màu nền thành ${color}`);
+//   };
 
-  return (
-    <View style={[styles.container, { backgroundColor: bgColor }]}>
-      <Text style={styles.title}>Chọn màu nền</Text>
+//   return (
+//     <View style={[styles.container, { backgroundColor: bgColor }]}>
+//       <Text style={styles.title}>Chọn màu nền</Text>
 
-      <ColorButton
-        title="Red"
-        color="red"
-        onPress={handleChangeColor}
-      />
-      <ColorButton
-        title="Green"
-        color="green"
-        onPress={handleChangeColor}
-      />
-      <ColorButton
-        title="Blue"
-        color="blue"
-        onPress={handleChangeColor}
-      />
-    </View>
-  );
-}
+//       <ColorButton
+//         title="Red"
+//         color="red"
+//         onPress={handleChangeColor}
+//       />
+//       <ColorButton
+//         title="Green"
+//         color="green"
+//         onPress={handleChangeColor}
+//       />
+//       <ColorButton
+//         title="Blue"
+//         color="blue"
+//         onPress={handleChangeColor}
+//       />
+//     </View>
+//   );
+// }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: "bold",
-    marginBottom: 20,
-  },
-});
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     justifyContent: "center",
+//     alignItems: "center",
+//   },
+//   title: {
+//     fontSize: 24,
+//     fontWeight: "bold",
+//     marginBottom: 20,
+//   },
+// });
