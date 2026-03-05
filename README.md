@@ -20,3 +20,8 @@
 
 --Bài 6.1 : Validate data 
 <img width="1920" height="1080" alt="Nguyễn Văn Khải - 23810310059 - Bài tập 6 1 Ngày 02-03" src="https://github.com/user-attachments/assets/c23fb2eb-ea05-445d-bf64-3d083dc2fc42" />
+
+--Bài 8.1 LoginScreen navigates to HomeScreen
+<img width="900" height="1080" alt="image" src="https://github.com/user-attachments/assets/ff650f1c-95e2-4346-8efb-ac768aca9592" />
+<img width="900" height="1080" alt="image" src="https://github.com/user-attachments/assets/ee30edf1-4d56-4361-90e8-255a5247d91e" />
+
