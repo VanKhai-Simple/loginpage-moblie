@@ -1,26 +1,32 @@
 // import { StatusBar } from 'expo-status-bar';
-// import { StyleSheet, Text, View , FlatList,SafeAreaView, } from 'react-native';
-// import { View, Button, Alert, StyleSheet ,Platform } from "react-native";
+
 import React, { useState } from "react";
-// import { View, Text, Button, StyleSheet } from "react-native";
-import { View, Text, StyleSheet, Alert } from "react-native";
+import {Button, View, Text, StyleSheet, Alert ,Platform , FlatList,SafeAreaView,} from "react-native";
+
 // import ColorButton from "./src/ColorButton";
+// import LoginScreen from "./src/LoginScreen";
+
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
+import LoginScreen from "./screens/LoginScreen";
+import HomeScreen from "./screens/HomeScreen";
 
 import { Ionicons } from "@expo/vector-icons";
-import LoginScreen from "./src/LoginScreen";
 
-export default function App() {
-  return <LoginScreen />;
-}
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+// export default function App() {
+//   return <LoginScreen />;
+// }
+
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     backgroundColor: '#fff',
+//     alignItems: 'center',
+//     justifyContent: 'center',
+//   },
+// });
 
 
 // --------------- ------------------Bài 3.1 --------------------------------------//
@@ -312,3 +318,19 @@ const styles = StyleSheet.create({
 //     marginBottom: 20,
 //   },
 // });
+
+
+// --------------- ------------------Bài 4.1 --------------------------------------//
+
+const Stack = createNativeStackNavigator();
+
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Login" component={LoginScreen} />
+        <Stack.Screen name="Home" component={HomeScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
